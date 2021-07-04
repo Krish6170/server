@@ -1,0 +1,13 @@
+body{
+    transition: 1s;
+}
+.black{
+    background-color: black;
+    color: cornsilk;
+}
+img{
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+
+}

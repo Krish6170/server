@@ -1,0 +1,53 @@
+<%- include("partials/header") %> 
+<%- include("partials/navbars") %> 
+
+
+    <div class="container">
+        <button type="button" class="btn btn-primary" id="btn">theme</button>
+
+
+        <h1><b>
+                <%=name%>
+            </b></h1>
+        <hr>
+        <div><b>description:</b>
+            <%= description %>
+        </div>
+        <span><b>subscribers:</b>
+            <%= subscribers %>
+        </span>
+        <h2>posts</h2>
+        <%for(let post of posts){ %>
+
+
+            <figure>
+                <blockquote class="blockquote">
+                    <p>
+                        <%=post.title%>
+                    </p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Someone famous in <cite title="Source Title">
+                        <%=post.author%>
+                    </cite>
+                </figcaption>
+            </figure>
+
+            <%if(post.img){ %>
+
+                <img class="img-fluid" src=<%=post.img %> alt="">
+                <%} %>
+                    <hr>
+
+
+                    <%} %>
+    </div>
+
+
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/btn.js"></script>
+
+</body>
+
+</html>
